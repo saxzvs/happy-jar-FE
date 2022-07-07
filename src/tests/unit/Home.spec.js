@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 
-import Home from "../../components/Home.vue";
+import Home from "@/views/Home.vue";
 // import { createRouter, createWebHistory } from 'vue-router';
 
 describe("Home.vue", () => {
