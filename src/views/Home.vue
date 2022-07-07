@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Footer',
   props: {}
 }
 </script>
+
+<style lang="scss">
+</style>
