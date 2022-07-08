@@ -2,7 +2,7 @@
   <nav>
     <router-link to="/">Home</router-link>
     |
-    <router-link to="/product">product</router-link>
+    <router-link to="/moodList">MoodList</router-link>
   </nav>
   <router-view/>
 </template>

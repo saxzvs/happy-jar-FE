@@ -9,7 +9,7 @@ const navigationMenu = [
     id: 2,
     name: "list",
     icon: "",
-    url: "/Product",
+    url: "/moodList",
   }
 ];
 
