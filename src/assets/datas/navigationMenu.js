@@ -2,13 +2,13 @@ const navigationMenu = [
   {
     id: 1,
     name: "home",
-    icon: "",
+    icon: 'home',
     url: "/",
   },
   {
     id: 2,
-    name: "list",
-    icon: "",
+    name: "moodList",
+    icon: ['far', 'square-check'],
     url: "/moodList",
   }
 ];
