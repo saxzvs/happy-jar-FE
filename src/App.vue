@@ -1,17 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link>
-    |
-    <router-link to="/moodList">MoodList</router-link>
-  </nav>
+  <Navigation/>
   <router-view/>
 </template>
 
 <script>
+import Navigation from "./components/App/Navigation";
 
 export default {
   name: 'App',
   components: {
+    Navigation
   }
 }
 </script>
