@@ -47,4 +47,27 @@ describe("Navigation.vue", () => {
     expect(routerCount === MenuList.length).toBe(true);
   });
 
+  test("Font Awesome icon 호출 테스트.", async () => {
+    const wrapper = mount(Navigation, {
+      global: {
+        plugins: [router],
+      },
+    });
+
+    await wrapper.setData({
+      menus: MenuList
+    });
+
+    const fontAwesomeIcons = wrapper.findAll(`font-awesome-icon`);
+
+    MenuList.forEach(({ icon }, index) => {
+      const isString = typeof icon === "string";
+
+      const iconName = isString ? icon : icon[1];
+
+      expect(fontAwesomeIcons[index].attributes('icon').includes(iconName)).toBe(true);
+
+    });
+  });
+
 })
