@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>MoodList</h1>
+    <h1 data-test="title">MoodList</h1>
   </div>
 </template>
 
