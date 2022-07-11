@@ -7,10 +7,6 @@ div {
   height: 100%;
 }
 
-.box-shadow {
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
 .flex-space-between {
   display: flex;
   justify-content: space-between;
@@ -37,5 +33,14 @@ div {
 }
 
 
+.box-shadow {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
 
+.menu {
+  color: $dark-gray;
 
+  &.selected {
+    color: $white;
+  }
+}

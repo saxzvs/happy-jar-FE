@@ -6,7 +6,7 @@
         :to="menu.url"
         class="link"
         data-test="nav-router">
-      <font-awesome-icon :icon="menu.icon" />
+      <font-awesome-icon class="menu" :icon="menu.icon" :data-test="menu.icon" />
     </router-link>
   </nav>
 </template>

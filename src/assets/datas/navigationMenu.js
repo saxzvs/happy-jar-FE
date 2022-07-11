@@ -2,13 +2,31 @@ const navigationMenu = [
   {
     id: 1,
     name: "home",
-    icon: 'home',
+    icon: 'house',
+    // icon: 'home',
     url: "/",
   },
   {
     id: 2,
     name: "moodList",
     icon: ['far', 'square-check'],
+//    icon: ['far', 'square-check'],
+    url: "/moodList",
+  },
+  {
+    id: 3,
+    name: "yearsInPixel",
+    // icon: ['fas', 'table-cells'],
+    // icon: ['fas', 'braille'],
+    icon: 'chess-board',
+    url: "/moodList",
+  },
+  {
+    id: 4,
+    name: "myPage",
+    icon: 'user',
+    // icon: ['fas', 'child'],
+    // icon: ['fas', 'child-reaching'],
     url: "/moodList",
   }
 ];
