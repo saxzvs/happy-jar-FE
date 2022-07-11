@@ -15,11 +15,11 @@ const navigationMenu = [
   },
   {
     id: 3,
-    name: "yearsInPixel",
+    name: "yearsInPixels",
     // icon: ['fas', 'table-cells'],
     // icon: ['fas', 'braille'],
     icon: 'chess-board',
-    url: "/moodList",
+    url: "/yearsInPixels",
   },
   {
     id: 4,
@@ -27,7 +27,7 @@ const navigationMenu = [
     icon: 'user',
     // icon: ['fas', 'child'],
     // icon: ['fas', 'child-reaching'],
-    url: "/moodList",
+    url: "/myPage",
   }
 ];
 
