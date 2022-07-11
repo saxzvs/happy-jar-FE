@@ -26,8 +26,11 @@ export default {
   },
   methods: {
     setActiveStyle(url) {
-      let resultClass = this.$route.path === url ? "menu selected" : "menu";
+      // let resultClass = this.$route.path === url ? "menu selected" : "menu";
 
+
+      let resultClass = "menu fa-lg";
+      if (this.$route.path === url) resultClass += " selected"
       return resultClass;
     }
   }
