@@ -4,8 +4,8 @@
 
 <script>
 export default {
-  name: "YearsInPixels"
-}
+  name: 'YearsInPixels',
+};
 </script>
 
 <style scoped>

@@ -7,6 +7,6 @@
 <script>
 export default {
   name: 'MoodList',
-  props: {}
-}
+  props: {},
+};
 </script>

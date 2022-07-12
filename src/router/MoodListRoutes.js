@@ -1,9 +1,9 @@
-import MoodList from "@/views/MoodList";
+import MoodList from '@/views/MoodList.vue';
 
 export default [
   {
-    path: "/moodList",
-    name: "MoodList",
-    component: MoodList
-  }
-]
+    path: '/moodList',
+    name: 'MoodList',
+    component: MoodList,
+  },
+];

@@ -4,14 +4,14 @@
 </template>
 
 <script>
-import Navigation from "./components/App/Navigation";
+import Navigation from './components/App/Navigation.vue';
 
 export default {
   name: 'App',
   components: {
-    Navigation
-  }
-}
+    Navigation,
+  },
+};
 </script>
 
 <style lang="scss">

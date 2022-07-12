@@ -1,9 +1,9 @@
-import YearsInPixels from '@/views/YearsInPixels'
+import YearsInPixels from '@/views/YearsInPixels.vue';
 
 export default [
   {
-    path: "/yearsInPixels",
-    name: "YearsInPixels",
+    path: '/yearsInPixels',
+    name: 'YearsInPixels',
     component: YearsInPixels,
-  }
-]
+  },
+];

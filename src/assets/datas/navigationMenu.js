@@ -1,34 +1,34 @@
 const navigationMenu = [
   {
     id: 1,
-    name: "home",
+    name: 'home',
     icon: 'house',
     // icon: 'home',
-    url: "/",
+    url: '/',
   },
   {
     id: 2,
-    name: "moodList",
+    name: 'moodList',
     icon: ['far', 'square-check'],
-//    icon: ['far', 'square-check'],
-    url: "/moodList",
+    //    icon: ['far', 'square-check'],
+    url: '/moodList',
   },
   {
     id: 3,
-    name: "yearsInPixels",
+    name: 'yearsInPixels',
     // icon: ['fas', 'table-cells'],
     // icon: ['fas', 'braille'],
     icon: 'chess-board',
-    url: "/yearsInPixels",
+    url: '/yearsInPixels',
   },
   {
     id: 4,
-    name: "myPage",
+    name: 'myPage',
     icon: 'user',
     // icon: ['fas', 'child'],
     // icon: ['fas', 'child-reaching'],
-    url: "/myPage",
-  }
+    url: '/myPage',
+  },
 ];
 
 export default navigationMenu;
