@@ -2,37 +2,6 @@
   box-sizing: border-box;
 }
 
-div {
-  background: $background;
-  height: 100%;
-}
-
-.flex-space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-.flex-space-around {
-  display: flex;
-  justify-content: space-around;
-}
-
-.flex-space-evenly {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.flex-justify-center {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-align-center {
-  display: flex;
-  align-items: center;
-}
-
-
 .box-shadow {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
