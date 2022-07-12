@@ -15,8 +15,6 @@ $blue: #71B2E1;
 $green: #70BC74;
 
 // set color
-$background: $white;
-$navigationBgColor: $black;
 $point: $black;
 $happy: $yellow;
 $excite: $orange;
@@ -24,4 +22,8 @@ $angry: $red;
 $worry: $purple;
 $depressed: $blue;
 $peaceful: $green;
+
+$background: $white;
+$navigationBgColor: $black;
+$modalBgColor: rgba(0, 0, 0, 0.3);
 
