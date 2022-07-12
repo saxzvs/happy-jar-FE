@@ -21,6 +21,6 @@ describe('Home.vue', () => {
     await wrapper.find('[data-test="mood-edit-button"]').trigger('click');
     await flushPromises();
 
-    expect(wrapper.exists('[data-test="modal"]')).toBe(true);
+    expect(wrapper.find('[data-test="modal"]').exists()).toBe(true);
   });
 });
