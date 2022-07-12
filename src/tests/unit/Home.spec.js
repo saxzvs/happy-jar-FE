@@ -23,4 +23,20 @@ describe('Home.vue', () => {
 
     expect(wrapper.find('[data-test="modal"]').exists()).toBe(true);
   });
+
+  test('모달 "close"버튼 클릭시, 모달 닫히는지 확인.', async () => {
+    const wrapper = mount(Home);
+
+    await wrapper.setData({
+      editModal: {
+        isVisible: true,
+      },
+    });
+
+    await wrapper.get('[data-test="modal-close"]').trigger('click');
+    await flushPromises();
+
+    await console.log(wrapper.html());
+    await expect(wrapper.find('[data-test="modal"]').exists()).toBeFalsy();
+  });
 });
