@@ -24,7 +24,7 @@ describe('Navigation.vue', () => {
       },
     });
 
-    expect(wrapper.get('[data-test="nav-wrapper"]').exists()).toBe(true);
+    expect(wrapper.find('[data-test="nav-wrapper"]').exists()).toBe(true);
   });
 
   test('Navigation 메뉴 리스트 모두 불러오는지 확인.', async () => {
@@ -75,7 +75,7 @@ describe('Navigation.vue', () => {
     await flushPromises();
 
     expect(wrapper.get('[data-test="title"]').text()).toBe('Home');
-    expect(wrapper.get('[data-test="icon-home"]').classes('selected')).toBe(true);
+    expect(wrapper.get('[data-test="icon-home"]').classes('selected')).toBeTruthy();
   });
 
   test("Navigation 'moodList' 버튼 클릭 시, 라우팅 확인.", async () => {
@@ -89,6 +89,6 @@ describe('Navigation.vue', () => {
     await flushPromises();
 
     expect(wrapper.get('[data-test="title"]').text()).toBe('MoodList');
-    expect(wrapper.get('[data-test="icon-moodList"]').classes('selected')).toBe(true);
+    expect(wrapper.get('[data-test="icon-moodList"]').classes('selected')).toBeTruthy();
   });
 });
