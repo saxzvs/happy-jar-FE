@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1 data-test="title">Home</h1>
+    <Calendar data-test="calendar" />
+
     <button
       class="edit"
       @click="openModal"
@@ -16,12 +18,14 @@
 
 <script>
 import AddMood from '@/components/Modal/Modal.vue';
+import Calendar from '@/components/Home/Calendar.vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Footer',
   components: {
     AddMood,
+    Calendar,
   },
   props: {},
   data() {
@@ -40,7 +44,6 @@ export default {
     },
   },
 };
-
 </script>
 
 <style lang="scss">
@@ -52,9 +55,10 @@ export default {
     right: 3vh;
     width: 4em;
     height: 4em;
-    background: $black;
-    color: $white;
+
     border: none;
     border-radius: 50px;
+    color: $white;
+    background: $black;
   }
 </style>
