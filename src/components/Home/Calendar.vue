@@ -16,6 +16,9 @@
 </template>
 
 <script>
+import MoodDayDates from '@/assets/datas/moodDayData';
+
+// const { dates } = MoodDayDates.filter(({ mood }) => mood === 'happy')[0];
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -36,12 +39,28 @@ export default {
         dates: new Date(),
       }, {
         key: 'happy',
-        dot: 'red',
-        dates: [new Date('2022-07-01')],
+        dot: 'yellow',
+        dates: MoodDayDates.filter(({ mood }) => mood === 'happy')[0].dates,
       }, {
-        key: 'happy',
-        dot: 'pink',
-        dates: [new Date('2022-07-02')],
+        key: 'excite',
+        dot: 'orange',
+        dates: MoodDayDates.filter(({ mood }) => mood === 'excite')[0].dates,
+      }, {
+        key: 'angry',
+        dot: 'red',
+        dates: MoodDayDates.filter(({ mood }) => mood === 'angry')[0].dates,
+      }, {
+        key: 'worry',
+        dot: 'purple',
+        dates: MoodDayDates.filter(({ mood }) => mood === 'worry')[0].dates,
+      }, {
+        key: 'depressed',
+        dot: 'blue',
+        dates: MoodDayDates.filter(({ mood }) => mood === 'depressed')[0].dates,
+      }, {
+        key: 'peaceful',
+        dot: 'green',
+        dates: MoodDayDates.filter(({ mood }) => mood === 'peaceful')[0].dates,
       }],
     };
   },
@@ -100,8 +119,9 @@ export default {
 }
 
 .vc-dot {
-  width: 8px !important;
-  height: 8px !important;
+  margin-top:3px;
+  width: 10px !important;
+  height: 10px !important;
 }
 
 </style>
