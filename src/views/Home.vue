@@ -1,12 +1,15 @@
 <template>
-  <div>
   <div data-test="home-wrapper">
+<!--    <h1 data-test="title">Home</h1>-->
     <Calendar data-test="calendar" />
+
+    <PreMoodContents v-if="!todayMood.isSave"/>
+    <AfterMoodContents v-else/>
 
     <button
       class="edit"
-      @click="openModal"
-      data-test="mood-edit-button">
+      data-test="mood-edit-button"
+      @click="openModal">
       <font-awesome-icon icon="edit" class="fa-xl" />
     </button>
   </div>
@@ -19,6 +22,8 @@
 <script>
 import AddMood from '@/components/Modal/Modal.vue';
 import Calendar from '@/components/Home/Calendar.vue';
+import PreMoodContents from '@/components/Home/PreMoodContents.vue';
+import AfterMoodContents from '@/components/Home/AfterMoodContents.vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -26,10 +31,16 @@ export default {
   components: {
     AddMood,
     Calendar,
+    PreMoodContents,
+    AfterMoodContents,
   },
   props: {},
   data() {
     return {
+      todayMood: {
+        type: '',
+        isSave: false,
+      },
       editModal: {
         isVisible: false,
       },
@@ -47,6 +58,7 @@ export default {
 </script>
 
 <style lang="scss">
+<style lang="scss" scoped>
 @import "src/style/color";
 
   .edit {
