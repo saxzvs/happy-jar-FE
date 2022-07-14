@@ -17,23 +17,21 @@ const router = createRouter({
 });
 
 describe('Navigation.vue', () => {
-  test('Navigation 렌더링 확인.', () => {
-    const wrapper = mount(Navigation, {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = mount(Navigation, {
       global: {
         plugins: [router],
       },
     });
+  });
 
+  test('Navigation 렌더링 확인.', () => {
     expect(wrapper.find('[data-test="nav-wrapper"]').exists()).toBe(true);
   });
 
   test('Navigation 메뉴 리스트 모두 불러오는지 확인.', async () => {
-    const wrapper = mount(Navigation, {
-      global: {
-        plugins: [router],
-      },
-    });
-
     await wrapper.setData({
       menus: MenuList,
     });
@@ -44,12 +42,6 @@ describe('Navigation.vue', () => {
   });
 
   test('Font Awesome 아이콘 설정값으로 제대로 호출해오는지 확인.', async () => {
-    const wrapper = mount(Navigation, {
-      global: {
-        plugins: [router],
-      },
-    });
-
     await wrapper.setData({
       menus: MenuList,
     });
@@ -63,14 +55,19 @@ describe('Navigation.vue', () => {
       expect(fontAwesomeIcons[index].attributes('icon')).toContain(iconName);
     });
   });
+});
 
-  test("Navigation 'home' 버튼 클릭시, 라우팅되는지 확인.", async () => {
-    const wrapper = mount(App, {
+describe('App.vue', () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = mount(App, {
       global: {
         plugins: [router],
       },
     });
+  });
 
+  test("Navigation 'home' 버튼 클릭시, 라우팅되는지 확인.", async () => {
     await wrapper.get('[data-test="nav-router-home"]').trigger('click');
     await flushPromises();
 
@@ -79,12 +76,6 @@ describe('Navigation.vue', () => {
   });
 
   test("Navigation 'moodList' 버튼 클릭 시, 라우팅 확인.", async () => {
-    const wrapper = mount(App, {
-      global: {
-        plugins: [router],
-      },
-    });
-
     await wrapper.get('[data-test="nav-router-moodList"]').trigger('click');
     await flushPromises();
 
