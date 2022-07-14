@@ -7,16 +7,16 @@
         <font-awesome-icon
           icon="xmark"
           class="close fa-2x"
-          @click="close"
-          data-test="modal-close" />
+          data-test="modal-close"
+          @click="close"/>
       </div>
 
       <div class="body">
         <slot name="body">default body</slot>
       </div>
 
-      <div class="footer">
-        <button class="button" @click="close">확인</button>
+      <div class="footer" @click="close">
+        확인
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "src/style/color.scss";
 
 .overlay {
@@ -51,7 +51,10 @@ export default {
   align-items: center;
 
   .modal-container {
+    position: relative;
+
     width: 300px;
+    min-height: 30vh;
     margin: 0px auto;
     padding: 20px 30px;
     background-color: $white;
@@ -66,9 +69,26 @@ export default {
         right: -15px;
       }
     }
+
     .body {
       margin: 20px 0;
     }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+      height: 5vh;
+      background: $black;
+      color: $white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
   }
 }
 

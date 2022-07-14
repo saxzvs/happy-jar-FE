@@ -14,9 +14,10 @@
     </button>
   </div>
 
-  <AddMood
-    v-if="editModal.isVisible"
-    @close="closeModal"/>
+  <AddMood v-if="editModal.isVisible" @close="closeModal">
+    <template v-slot:header>오늘의 기분을 골라주세요.</template>
+    <template v-slot:body></template>
+  </AddMood>
 </template>
 
 <script>
@@ -57,7 +58,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
 <style lang="scss" scoped>
 @import "src/style/color";
 
