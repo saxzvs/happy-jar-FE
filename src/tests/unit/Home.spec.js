@@ -40,4 +40,30 @@ describe('Home.vue', () => {
     await console.log(wrapper.html());
     await expect(wrapper.find('[data-test="modal"]').exists()).toBeFalsy();
   });
+
+  test('"오늘의 기분" 등록 전 "PreMoodContents" 컴포넌트 호출 확인', async () => {
+    const wrapper = mount(Home);
+
+    await wrapper.setData({
+      todayMood: {
+        type: '',
+        isSave: false,
+      },
+    });
+
+    await expect(wrapper.find('[data-test="pre-mood-container"]').exists()).toBeTruthy();
+  });
+
+  test('"오늘의 기분" 등록 후 "AfterMoodContents" 컴포넌트 호출 확인', async () => {
+    const wrapper = mount(Home);
+
+    await wrapper.setData({
+      todayMood: {
+        type: 'happy',
+        isSave: true,
+      },
+    });
+
+    await expect(wrapper.find('[data-test="after-mood-container"]').exists()).toBeTruthy();
+  });
 });
