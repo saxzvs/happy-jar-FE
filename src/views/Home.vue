@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 data-test="title">Home</h1>
+  <div data-test="home-wrapper">
     <Calendar data-test="calendar" />
 
     <button

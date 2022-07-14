@@ -5,9 +5,9 @@ import Calendar from '../../components/Home/Calendar';
 
 describe('Home.vue', () => {
   test('"Home" 컴포넌트 렌더링 확인.', () => {
-    const wrapper = mount(Home, {});
+    const wrapper = mount(Home);
 
-    expect(wrapper.find('[data-test="title"]').exists()).toBeTruthy();
+    expect(wrapper.find('[data-test="home-wrapper"]').exists()).toBeTruthy();
   });
 
   test('"edit" 버튼 생성 여부.', () => {

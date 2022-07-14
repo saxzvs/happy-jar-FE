@@ -74,7 +74,7 @@ describe('Navigation.vue', () => {
     await wrapper.get('[data-test="nav-router-home"]').trigger('click');
     await flushPromises();
 
-    expect(wrapper.get('[data-test="title"]').text()).toBe('Home');
+    expect(wrapper.find('[data-test="home-wrapper"]').exists()).toBeTruthy();
     expect(wrapper.get('[data-test="icon-home"]').classes('selected')).toBeTruthy();
   });
 
