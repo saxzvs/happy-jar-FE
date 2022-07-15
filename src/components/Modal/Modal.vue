@@ -3,7 +3,7 @@
     <div class="modal-container">
 
       <div class="header">
-        <slot name="header">default header</slot>
+        <slot name="header" class="header-text">default header</slot>
         <font-awesome-icon
           icon="xmark"
           class="close fa-2x"
@@ -63,6 +63,9 @@ export default {
     .header {
       position: relative;
 
+      .header-text {
+        font-size: 1.5em;
+      }
       .close {
         position: absolute;
         top: -10px;
