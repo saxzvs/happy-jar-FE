@@ -13,18 +13,18 @@ describe('Home.vue', () => {
     expect(wrapper.find('[data-test="home-wrapper"]').exists()).toBeTruthy();
   });
 
-  test('"edit" 버튼 생성 여부.', () => {
+  test('edit 버튼 생성 여부.', () => {
     expect(wrapper.find('[data-test="mood-edit-button"]')).toBeTruthy();
   });
 
-  test('"edit"버튼 클릭 시, 모달 생성 확인.', async () => {
+  test('edit 버튼 클릭 시, 모달 생성 확인.', async () => {
     await wrapper.find('[data-test="mood-edit-button"]').trigger('click');
     await flushPromises();
 
     expect(wrapper.find('[data-test="modal"]').exists()).toBeTruthy();
   });
 
-  test('모달 "close"버튼 클릭시, 모달 닫히는지 확인.', async () => {
+  test('모달 close 버튼 클릭시, 모달 닫히는지 확인.', async () => {
     await wrapper.setData({
       editModal: {
         isVisible: true,
