@@ -1,6 +1,6 @@
 <template>
+  <div class="overlay" data-test="modal">
     <div class="modal-container">
-
       <div class="header">
         <span class="header-text">
           <slot name="header">default header</slot>

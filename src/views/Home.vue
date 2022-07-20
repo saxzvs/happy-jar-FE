@@ -4,7 +4,6 @@
 
     <PreMoodContents v-if="!todayMood.isSave"/>
     <AfterMoodContents v-else/>
-
     <button
       class="edit"
       data-test="mood-edit-button"
@@ -14,8 +13,10 @@
   </div>
 
   <AddMood v-if="editModal.isVisible" @close="closeModal">
-    <template v-slot:header>오늘의 기분을 골라주세요.</template>
-    <template v-slot:body><MoodList /></template>
+    <template v-slot:header>오늘의 기분</template>
+    <template v-slot:body>
+      <TodayMoodSelectList :todayMood="todayMood.type" v-model:string="todayMood.type"/>
+    </template>
   </AddMood>
 
 </template>
@@ -25,7 +26,7 @@ import AddMood from '@/components/Modal/Modal.vue';
 import Calendar from '@/components/Home/Calendar.vue';
 import PreMoodContents from '@/components/Home/PreMoodContents.vue';
 import AfterMoodContents from '@/components/Home/AfterMoodContents.vue';
-import MoodList from '@/components/Modal/MoodList.vue';
+import TodayMoodSelectList from '@/components/Modal/TodayMoodSelectList.vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -35,7 +36,7 @@ export default {
     Calendar,
     PreMoodContents,
     AfterMoodContents,
-    MoodList,
+    TodayMoodSelectList,
   },
   props: {},
   data() {
