@@ -1,9 +1,10 @@
 <template>
-  <div class="overlay" data-test="modal">
     <div class="modal-container">
 
       <div class="header">
-        <slot name="header" class="header-text">default header</slot>
+        <span class="header-text">
+          <slot name="header">default header</slot>
+        </span>
         <font-awesome-icon
           icon="xmark"
           class="close fa-2x"
@@ -53,7 +54,7 @@ export default {
   .modal-container {
     position: relative;
 
-    width: 300px;
+    width: 40vh;
     min-height: 30vh;
     margin: 0px auto;
     padding: 20px 30px;
@@ -64,7 +65,10 @@ export default {
       position: relative;
 
       .header-text {
-        font-size: 1.5em;
+        position: absolute;
+        left: 0px;
+        font-size: 1.3em;
+        font-weight: bolder;
       }
       .close {
         position: absolute;
@@ -83,7 +87,7 @@ export default {
       bottom: 0;
 
       width: 100%;
-      height: 5vh;
+      height: 6vh;
       background: $black;
       color: $white;
 
