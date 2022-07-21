@@ -6,11 +6,12 @@
     <AfterMoodContents v-else/>
 
     <button
-      class="edit"
-      data-test="mood-edit-button"
-      @click="openModal">
+        class="edit"
+        data-test="mood-edit-button"
+        @click="openModal">
       <font-awesome-icon icon="edit" class="fa-xl" />
     </button>
+    <div class="home-background" :class="this.$store.state.todayMood"></div>
   </div>
 
   <AddMood v-if="editModal.isVisible" @close="closeModal">
@@ -65,16 +66,43 @@ export default {
 <style lang="scss">
 @import "src/style/color";
 
-  .edit {
-    position: fixed;
-    bottom: 11vh;
-    right: 3vh;
-    width: 4em;
-    height: 4em;
+.home-background {
+  width: 100vh;
+  height: 40vh;
+  position: fixed;
+  bottom: 0;
+  z-index: -10;
 
-    border: none;
-    border-radius: 50px;
-    color: $white;
-    background: $black;
+  &.happy {
+    background: linear-gradient($transparent, $happy);
   }
+  &.excite {
+    background: linear-gradient($transparent, $excite);
+  }
+  &.angry {
+    background: linear-gradient($transparent, $angry);
+  }
+  &.worry {
+    background:linear-gradient($transparent, $worry);
+  }
+  &.depressed {
+    background: linear-gradient($transparent, $depressed);
+  }
+  &.peaceful {
+    background: linear-gradient($transparent, $peaceful);
+  }
+}
+
+.edit {
+  position: fixed;
+  bottom: 11vh;
+  right: 3vh;
+  width: 4em;
+  height: 4em;
+
+  border: none;
+  border-radius: 50px;
+  color: $white;
+  background: $black;
+}
 </style>

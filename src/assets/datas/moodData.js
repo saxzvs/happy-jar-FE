@@ -6,7 +6,7 @@ const moodData = [{
 }, {
   id: 2,
   type: 'excite',
-  ment: '신난다 야호! 🤘😎🥳',
+  ment: '신난다 야호! 🤘😎',
   color: 'orange',
 }, {
   id: 3,
