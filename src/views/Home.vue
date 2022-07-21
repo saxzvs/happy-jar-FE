@@ -4,6 +4,7 @@
 
     <PreMoodContents v-if="!todayMood.isSave"/>
     <AfterMoodContents v-else/>
+
     <button
       class="edit"
       data-test="mood-edit-button"

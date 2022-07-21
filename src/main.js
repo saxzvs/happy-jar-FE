@@ -1,4 +1,6 @@
 import { createApp } from 'vue';
+
+import store from '@/store';
 import router from '@/router';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -17,5 +19,6 @@ library.add(far, fas);
 createApp(App)
   .component('font-awesome-icon', FontAwesomeIcon)
   .use(router)
+  .use(store)
   .use(VCalendar)
   .mount('#app');

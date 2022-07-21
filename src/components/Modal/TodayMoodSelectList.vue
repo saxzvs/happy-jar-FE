@@ -18,23 +18,21 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import moodData from '@/assets/datas/moodData';
 
 export default {
   name: 'MoodList',
   props: {
-    todayMood: {
-      type: String,
-      default: 'happy',
-    },
   },
   computed: {
+    ...mapState(['todayMood']),
     todayMoodType: {
       get() {
         return this.todayMood;
       },
       set(value) {
-        return this.$emit('update:string', value);
+        this.$store.commit('setTodayMood', value);
       },
     },
   },
