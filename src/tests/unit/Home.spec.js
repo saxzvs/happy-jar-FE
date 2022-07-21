@@ -2,11 +2,26 @@ import { mount, flushPromises } from '@vue/test-utils';
 
 import Home from '@/views/Home.vue';
 
+const $store = {
+  state: {
+    todayMood: 'happy',
+  },
+  commit: jest.fn(),
+};
+
 describe('Home.vue', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = mount(Home);
+    $store.commit.mockClear();
+
+    wrapper = mount(Home, {
+      global: {
+        mocks: {
+          $store,
+        },
+      },
+    });
   });
 
   test('"Home" 컴포넌트 렌더링 확인.', () => {
