@@ -1,14 +1,14 @@
 <template>
-  <div class="wrapper">
+  <div class="item-wrapper">
     <div class="item">
       <p>앱버전</p>
       <span>{{appVer}}</span>
     </div>
     <div class="item">
-      <p class="sub">로그아웃</p>
+      <p>로그아웃</p>
     </div>
     <div class="item">
-      <p class="sub">자주 묻는 질문</p>
+      <p>자주 묻는 질문</p>
     </div>
     <div class="item">
       <p>잠금 설정</p>
@@ -16,10 +16,10 @@
       <span v-else>off</span>
     </div>
     <div class="item">
-      <p class="sub">데이터 초기화</p>
+      <p>데이터 초기화</p>
     </div>
     <div class="item">
-      <p class="sub">만든 사람들</p>
+      <p>만든 사람들</p>
     </div>
   </div>
 </template>
@@ -38,29 +38,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin: auto;
+  width: 90%;
+}
 .item {
   display: flex;
   justify-content: space-between;
-  position: relative;
-  margin-bottom: 5.5vw;
   padding: 0.85vw;
-  background: #fff;
-  border-radius: 0.8vw;
-  font-size: 4.6vw;
+  font-size: 2.3vh;
   align-items: center;
+  flex-basis: auto;
+  flex-grow: 0;
 }
-.item > span:last-child {
+.item > :not(:first-child):last-child {
   color: #979797;
 }
-.item p.sub {
+.item p:only-child {
   display: contents;
 }
-.item p.sub:after {
+.item p:only-child:after {
   content: '>';
-  display: inline-block;
   margin-left: 0.1125vw;
-  font-weight: normal;
   color: #979797;
-  float: right;
 }
 </style>

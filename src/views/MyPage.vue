@@ -1,5 +1,8 @@
 <template>
-  <h2 class="pg-title">마이페이지</h2>
+  <div class="title-wrapper">
+    <h2 class="pg-title">마이페이지</h2>
+    <!--<div>마이 설정</div>-->
+  </div>
 
   <MyPageContents />
 </template>
@@ -20,19 +23,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.pg-title{
-  width: 100%;
-  margin-bottom: 1.5vw;
-  justify-content: center;
-}
-.pg-title:after {
-  content: "";
-  display: inline-block;
-  height:0px;
-  border-radius: 2px;
-  color: gray;
-  border: 1px solid currentColor;
-  width: 80%;
-}
+<style lang="scss">
+@import "src/style/common";
+
 </style>
