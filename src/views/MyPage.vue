@@ -1,20 +1,24 @@
 <template>
-  <div class="title-wrapper">
+  <!--div class="title-wrapper">
     <h2 class="pg-title">마이페이지</h2>
-    <!--<div>마이 설정</div>-->
-  </div>
+  </div-->
+  <PageTitle>
+    <template v-slot:title>마이페이지</template>
+    <template v-slot:description>궁금한 내용이 있나요?</template>
+  </PageTitle>
 
   <MyPageContents />
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars,import/extensions
-import MyPageContents from '@/components/MyPage/MyPageContents';
+import PageTitle from '@/components/Modal/PageTitle.vue';
+import MyPageContents from '@/components/MyPage/MyPageContents.vue';
 
 export default {
   name: 'MyPage',
   props: {},
   components: {
+    PageTitle,
     MyPageContents,
   },
   data() {
